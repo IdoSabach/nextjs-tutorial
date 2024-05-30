@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+*{
+  /* outline: 1px solid red; */
+}
 .postForm__input{
   @apply text-sm w-full rounded-sm p-2 ring-1 text-gray-950 shadow-sm ring-inset ring-gray-300 focus:ring-indigo-600
 }
@@ -13,4 +15,12 @@
 
 .postForm__btn{
   @apply bg-blue-500 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-sm
+}
+
+.btn{
+  @apply  bg-blue-500 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-sm
+}
+
+.btn--red{
+  @apply  bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded-sm
 }
