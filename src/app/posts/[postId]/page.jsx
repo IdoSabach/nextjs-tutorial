@@ -2,6 +2,12 @@
 
 import Link from "next/link";
 
+export const metadata = {
+  title: "View Posts | Next.js",
+  description: "View Posts Description by Next.js",
+};
+
+
 export default function PostsViewPage({ params }) {
   const { postId } = params;
   return (

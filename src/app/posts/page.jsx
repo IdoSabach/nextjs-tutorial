@@ -5,6 +5,11 @@ import PostPage from "@/components/PostPage";
 
 const POSTS = Array.from({length:30})
 
+export const metadata = {
+  title: "Posts | Next.js",
+  description: "Posts Description by Next.js",
+};
+
 export default function Posts() {
   return (
     <>
