@@ -1,8 +1,9 @@
 // domain.co.il/posts
 
 import Link from "next/link";
+import PostPage from "@/components/PostPage";
 
-const POSTS = Array.from({length:10})
+const POSTS = Array.from({length:30})
 
 export default function Posts() {
   return (
@@ -11,11 +12,9 @@ export default function Posts() {
         <h1>Posts Page</h1>
         <Link href="/posts/new" className="btn ml-auto">New Post</Link>
       </header>
-      <ul>
+      <ul className="grid grid-cols-3 gap-3">
         {POSTS.map((_,index) => (
-          <li key={index}>
-            <Link href={`/posts/${index}`}>Post {index}</Link>
-          </li>
+          <PostPage key={index} postId={index.toString()}/>
         ))}
       </ul>
     </>
