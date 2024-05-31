@@ -2,11 +2,18 @@
 
 import Link from "next/link";
 
-export const metadata = {
-  title: "View Posts | Next.js",
-  description: "View Posts Description by Next.js",
-};
+// export const metadata = {
+//   title: "View Posts | Next.js",
+//   description: "View Posts Description by Next.js",
+// };
 
+export function generateMetadata({params}){
+  const { postId } = params;
+  return {
+    title: `Post ${postId}`,
+    description: `Post des ${postId}`
+  }
+}
 
 export default function PostsViewPage({ params }) {
   const { postId } = params;
