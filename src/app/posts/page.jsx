@@ -10,7 +10,12 @@ export const metadata = {
   description: "Posts Description by Next.js",
 };
 
-export default function Posts() {
+export default async function Posts() {
+  const response = await fetch('https://dummyjson.com/posts')
+  const data = await response.json()
+
+  console.log(data)
+  
   return (
     <>
       <header className="flex items-center mb-6">
